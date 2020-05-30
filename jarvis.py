@@ -8,8 +8,6 @@ import os
 import pyautogui # pip install pyautogui
 import psutil # pip install psutil
 import pyjokes
-import serial
-ser = serial.Serial('COM3',9600)
 
 engine = pyttsx3.init()
 
@@ -154,12 +152,6 @@ while True:
 
 		elif 'joke' in query:
 			jokes()
-
-		elif 'on' in query:
-			ser.write(b'Y')
-
-		elif 'off' in query:
-			ser.write(b'N')
 
 		elif 'offline' in query:
 			quit()
